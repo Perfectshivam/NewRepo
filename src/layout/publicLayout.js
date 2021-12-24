@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Counter from "@pages/public/counter/Counter";
+import CounterRedux from "@pages/public/counter/CounterRedux";
 
 export default function PublicLayout({ children }) {
   return (
@@ -15,6 +16,7 @@ export default function PublicLayout({ children }) {
         </Grid>
       </Grid>
       <Counter />
+      <CounterRedux/>
     </Box>
   );
 }
