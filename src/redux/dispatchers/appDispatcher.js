@@ -1,7 +1,8 @@
 // App wide dispatcher
 
 import Stores from "../store";
-import Actions from "../actions/appActions";
+import Actions,{Incr,Decr}  from "../actions/appActions";
+
 
 const AppDispatcher = {
   setUserLoggedIn: (data) => {
@@ -16,6 +17,12 @@ const AppDispatcher = {
   },
   updateUserInfo: (data) => {
     Stores.dispatch({ type: Actions.LOGIN, data });
+  },
+  useIncrease:() => {
+    Stores.dispatch(Incr())
+  },
+  useDecrease:() => {
+    Stores.dispatch(Decr())
   }
 };
 
